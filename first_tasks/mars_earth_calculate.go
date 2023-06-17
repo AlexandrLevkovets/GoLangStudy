@@ -35,6 +35,5 @@ func travelFromEarthToMarsCalculated(distanceOfTravel int) {
 
 func main() {
 	travelFromEarthToMars()
-	fmt.Println(rand.Intn(401000001-56000000) + 56000000)
 	travelFromEarthToMarsCalculated(rand.Intn(401000001-56000000) + 56000000)
 }
