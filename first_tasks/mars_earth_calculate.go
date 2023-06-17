@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/rand"
 )
 
 // Here I will compile this task
@@ -17,13 +18,23 @@ func travelFromEarthToMars() {
 	const hoursInDay = 24
 	var speedOfShip = 100800.0        // km/h
 	var distanceOfTravel = 96900000.0 // km
-	fmt.Printf("This trip will take this count of days %v", math.Ceil(distanceOfTravel/(speedOfShip*hoursInDay)))
+	fmt.Printf("This trip will take this count of days %v\n", math.Ceil(distanceOfTravel/(speedOfShip*hoursInDay)))
 }
 
 // Also, as part of the task, I decided to add a new condition:
-// The distance between Earth and Mars differs at different times and depends on where the planets are orbiting
-// the Sun at a given time. Write a program to generate a random distance between 56,000,000 and 401,000,000 km.
+
+// The distance between Earth and Mars differs at different times and depends on where the planets are
+// orbiting the Sun at a given time.
+// Add the condition that the distance becomes random from 56,000,000 to 401,000,000 km.
+
+func travelFromEarthToMarsCalculated(distanceOfTravel int) {
+	const hoursInDay = 24
+	var speedOfShip = 100800.0
+	fmt.Printf("This trip will take this count of days %v\n", math.Ceil(float64(distanceOfTravel)/(speedOfShip*hoursInDay)))
+}
 
 func main() {
 	travelFromEarthToMars()
+	fmt.Println(rand.Intn(401000001-56000000) + 56000000)
+	travelFromEarthToMarsCalculated(rand.Intn(401000001-56000000) + 56000000)
 }
