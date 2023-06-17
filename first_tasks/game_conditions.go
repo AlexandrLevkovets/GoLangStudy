@@ -4,7 +4,7 @@ import "fmt"
 
 // Here I will compile this task
 // There are several locations in the adventure game in question.
-// Write a program that uses if and else if to
+// Write a program that uses if to
 // display a description of each of the three locations: caves, entrances, and mountains
 
 func displayDescription(location string) {
